@@ -1,16 +1,17 @@
-package com.example.WeatherService;
+package com.example.Eurekaaaa;
 
+import de.codecentric.boot.admin.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-@EnableEurekaClient
-public class WeatherServiceApplication {
+@EnableEurekaServer
+@EnableAdminServer
+public class EurekaaaaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WeatherServiceApplication.class, args);
+		SpringApplication.run(EurekaaaaApplication.class, args);
 	}
 
 }

@@ -27,7 +27,7 @@ public class WeatherDelegate {
     {
         System.out.println("Getting Weather details for " + zipCode);
 
-        String response = restTemplate.exchange("http:/localhost:8080/zipcode/{zipCode}",
+        String response = restTemplate.exchange("http:/weather-service/zipcode/{zipCode}",
                 HttpMethod.GET, null, new ParameterizedTypeReference<String>() {}, zipCode).getBody();
 
         System.out.println("Response Body " + response);
@@ -40,7 +40,7 @@ public class WeatherDelegate {
     {
         System.out.println("Getting Weather details for " + ville);
 
-        String response = restTemplate.exchange("http:/localhost:8080/ville/{ville}",
+        String response = restTemplate.exchange("http:/weather-service/ville/{ville}",
                 HttpMethod.GET, null, new ParameterizedTypeReference<String>() {}, ville).getBody();
 
         System.out.println("Response Body " + response);

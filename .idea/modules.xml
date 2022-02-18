@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Eurekaaaa/Eurekaaaa.iml" filepath="$PROJECT_DIR$/Eurekaaaa/Eurekaaaa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eurekaaaaaaa/Eurekaaaaaaa.iml" filepath="$PROJECT_DIR$/Eurekaaaaaaa/Eurekaaaaaaa.iml" />
       <module fileurl="file://$PROJECT_DIR$/ShowWeather/com-self-sprintboot-learning-apigateway.iml" filepath="$PROJECT_DIR$/ShowWeather/com-self-sprintboot-learning-apigateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/WeatherService/com.self.sprintboot.learning.employee.iml" filepath="$PROJECT_DIR$/WeatherService/com.self.sprintboot.learning.employee.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/projet-spring.iml" filepath="$PROJECT_DIR$/.idea/projet-spring.iml" />
