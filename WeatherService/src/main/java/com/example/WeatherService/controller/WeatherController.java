@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @RestController
 public class WeatherController {
-    public static final List<Weather> weathers = new ArrayList<>(){
+    public static final List<Weather> weathers = new ArrayList<Weather>(){
         private static final long serialVersionUID = -3970206781360313502L;
         {
             add(new Weather("Marseille","13000","France","Il fait beau"));
@@ -22,11 +22,11 @@ public class WeatherController {
         }
     };
 
-    @RequestMapping(name="getWeatherByCity", method= RequestMethod.GET,value="ville/{ville}")
+    @RequestMapping(name="getWeatherByCity", method= RequestMethod.GET,value="/ville/{ville}")
     public List<Weather> getWeatherByCity(@PathVariable String ville){
         try {
             return weathers.stream()
-                    .filter(weather -> ville.equals( weather.getVille()))
+                    .filter(weather -> ville.toUpperCase().equals( weather.getVille().toUpperCase()))
                     .collect(Collectors.toList());
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -34,7 +34,7 @@ public class WeatherController {
         }
     }
 
-    @RequestMapping(name="getWeatherByZipCode", method= RequestMethod.GET,value="zipcode/{zipCode}")
+    @RequestMapping(name="getWeatherByZipCode", method= RequestMethod.GET,value="/zipcode/{zipCode}")
     public List<Weather> getWeatherByZipCode(@PathVariable String zipCode){
         try {
             return weathers.stream()
@@ -46,7 +46,7 @@ public class WeatherController {
         }
     }
 
-    @RequestMapping(name="getWeatherByPays", method= RequestMethod.GET,value="pays/{pays}")
+    @RequestMapping(name="getWeatherByPays", method= RequestMethod.GET,value="/pays/{pays}")
     public List<Weather> getWeatherByPays(@PathVariable String pays){
         try {
             return weathers.stream()
